@@ -13,7 +13,7 @@
 
 
 'use strict';
-var tag = /\[.+\]/
+var tag = /.*\[.\].*/
 $("#robinChatMessageList").bind("DOMNodeInserted", function() {
     var x = $("#robinChatMessageList .robin-message").last();
     var message = x.find(".robin-message--message");
