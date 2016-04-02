@@ -1,11 +1,11 @@
 # RobinTagHighlighter
-Highlights [Tags] in robin chat.
+Highlights [T]ags in robin chat.
 
 Tags are useful for keeping track of topics.
 
 Press ,{letter} to automatically input a tag (e.g. ,m will be changed to [M]).
 
-Removes some spam.
+Removes some spam (will update to help remove more and more spam).
 
 Examples of tags:
 
@@ -17,6 +17,7 @@ etc.
 
 Example message with Tag:
 [B] Homebrewing beer is a little bit of a hobby of mine.
+Now all you need to do is look for [B] in highlighted messages to keep track of your discussion about beer!
 
 To get this, you can type
 ,b Homebrewing beer is a little bit of a hobby of mine.
