@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Robin Tag Highlighter
-// @namespace    ???
+// @namespace    https://github.com/taylorcoreyd
 // @version      0.0.1
 // @description  Highlights Tags in Robin chats!
 // @author       Chr12t0pher and cdtdev
@@ -20,4 +20,13 @@ $("#robinChatMessageList").bind("DOMNodeInserted", function() {
     if (message.text().search(tag) != -1) {
         message.css("background-color", "#b3f0ff");
     }
+});
+
+var inputBox = $(document).find(".c-form-control.text-counter-input");
+inputBox.on("input", function() {
+    var re = /\,[A-z]/;
+    var inVal = $( this ).val();
+    var i = inVal.search(re) + 1;
+    inVal = inVal.replace(re, "[" + inVal.charAt(i).toUpperCase() + "]");
+    $( this ).val(inVal);
 });
