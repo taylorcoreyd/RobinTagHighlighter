@@ -21,3 +21,6 @@ Now all you need to do is look for [B] in highlighted messages to keep track of 
 
 To get this, you can type
 ,b Homebrewing beer is a little bit of a hobby of mine.
+
+# To use
+To use this script, please use either Greasemonkey (Firefox) or Tampermonkey (other browsers).
