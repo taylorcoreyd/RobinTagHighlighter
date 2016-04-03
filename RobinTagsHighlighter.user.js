@@ -34,19 +34,23 @@ messageList.bind("DOMNodeInserted", function() {
     // Generally in form of [{script name}{gibberish}]|
     var spam = new RegExp('' // When modifying this, be sure to add a | to the last regex
                           + /\[Robin Autovoter.*\]|/.source
-                          + /\[spam.*\]|/.source
+                          // + /\[spam.*\]|/.source // Commented out because this script's spam is broken anyway.
                           + /\[Robin-Grow.*\]/.source
                          );
     if (messageText.text().search(spam) != -1) {
         lastMessage.remove();
     }
     
+    /*
     // Do a little spamming of our own. Feel free to delete the marked lines if you want to remove spam // mark
     // It shouldn't spam aggressively, only once every 100 messages of which you tagged.
     if (numberUsed >= 100) {    // mark
         inputBox.val("[spam] I'm using Robin Tag Highlighter to highlight and type tags: http://bit.ly/1oqH7WR").submit(); // mark
         numberUsed = 0;          // mark            ^ this one is marked too
-    }                            // mark
+    }     // mark
+    // Commented out because I just realized its broken. Will fix in future at some point?
+    // Low priority. Spamming doesn't really matter.
+    */
 });
 var numberUsed = 0; // For keeping track of spamming purposes. Will be reset occasionally.
 
